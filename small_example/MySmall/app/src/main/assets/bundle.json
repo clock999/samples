@@ -4,6 +4,14 @@
     {
       "uri": "main",
       "pkg": "com.example.mysmall.app.main"
+    },
+    {
+      "uri": "main2",
+      "pkg": "com.example.mysmall.app.main2"
+    },
+    {
+      "uri": "test",
+      "pkg": "com.example.mysmall.app.test"
     }
   ]
 }

@@ -14,20 +14,19 @@ import android.widget.Button;
 
 import net.wequick.small.Small;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
 public class LaunchActivity extends Activity {
     private View mContentView;
     private View mControlsView;
     private Button mButton1;
+    private Button mButton2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
         initUI();
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -43,8 +42,15 @@ public class LaunchActivity extends Activity {
         mButton1 = (Button) findViewById(R.id.button1);
         mButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("locald", "mButton1 onClick ..");
                 Small.openUri("main", LaunchActivity.this);
+            }
+        });
+
+        mButton2 = (Button) findViewById(R.id.button2);
+        mButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("locald","button2 onclick ..");
+                Small.openUri("test", LaunchActivity.this);
             }
         });
 
