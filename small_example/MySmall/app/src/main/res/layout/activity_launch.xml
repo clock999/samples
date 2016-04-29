@@ -51,6 +51,14 @@
                 android:layout_weight="1"
                 android:text="Launch app.test" />
 
+            <Button
+                android:id="@+id/update"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update" />
+
         </LinearLayout>
     </FrameLayout>
 

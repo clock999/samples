@@ -19,6 +19,7 @@ public class LaunchActivity extends Activity {
     private View mControlsView;
     private Button mButton1;
     private Button mButton2;
+    private Button mUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,13 @@ public class LaunchActivity extends Activity {
             public void onClick(View v) {
                 Log.d("locald","button2 onclick ..");
                 Small.openUri("test", LaunchActivity.this);
+            }
+        });
+
+        mUpdate = (Button) findViewById(R.id.update);
+        mUpdate.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new SmallUpgradeManager(getThis()).checkUpgrade();
             }
         });
 
