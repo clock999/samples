@@ -1,7 +1,6 @@
 package com.example.mysmall.app.test;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,12 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class SubActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sub);
     }
 
     @Override
@@ -28,19 +27,10 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-            Toast.makeText(this, "settings show toast", Toast.LENGTH_SHORT)
-            .show();
+            Toast.makeText(this, "sub activity settings show toast", Toast.LENGTH_SHORT)
+                    .show();
             return true;
         }
-
-        if (id == R.id.action_subactivity) {
-            Log.d("locald", "action_subactivity ");
-            Intent i = new Intent();
-            i.setClass(this, SubActivity.class);
-            startActivity(i);
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 }
