@@ -34,10 +34,15 @@ public class MainActivity extends Activity {
         }
 
         if (id == R.id.action_subactivity) {
-            Log.d("locald", "action_subactivity ");
             Intent i = new Intent();
             i.setClass(this, SubActivity.class);
             startActivity(i);
+            return true;
+        }
+
+        if (id == R.id.action_0) {
+            Intent intent = new Intent("MyReceiver123");
+            sendBroadcast(intent);
             return true;
         }
 

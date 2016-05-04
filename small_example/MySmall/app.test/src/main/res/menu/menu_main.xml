@@ -12,4 +12,10 @@
         android:orderInCategory="100"
         android:title="launch sub activity"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_0"
+        android:orderInCategory="100"
+        android:title="launch receiver"
+        app:showAsAction="never" />
 </menu>
