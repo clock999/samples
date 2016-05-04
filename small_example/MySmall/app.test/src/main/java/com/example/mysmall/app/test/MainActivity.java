@@ -9,6 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import com.example.mylib.MyLib;
+import com.example.mylib2.MyLib2;
+
 public class MainActivity extends Activity {
 
     @Override
@@ -46,6 +54,38 @@ public class MainActivity extends Activity {
             return true;
         }
 
+        if (id == R.id.action_1) {
+            test();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    private void test() {
+        MyLib.test();
+        Log.d("locald","mylib2 test " + MyLib2.test());
+        /*
+        File saveFile =  new File("/sdcard/file_test.txt");
+        FileInputStream instream;
+        String str = null;
+        try
+        {
+            saveFile.createNewFile();
+            instream =  new FileInputStream(saveFile);
+            byte[] buf = new byte[instream.available()];
+            instream.read(buf);
+            instream.close();
+            str = new String(buf);
+            Log.w("localdebug", "str is " + str);
+        }
+        catch(FileNotFoundException e)
+        {
+            Log.w("localdebug", "testFiles FileNotFoundException  \n");
+        }
+        catch(IOException e)
+        {
+            Log.w("localdebug", "testFiles IOException : \n" + e.getMessage());
+        }*/
     }
 }

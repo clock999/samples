@@ -18,4 +18,10 @@
         android:orderInCategory="100"
         android:title="launch receiver"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_1"
+        android:orderInCategory="100"
+        android:title="test files"
+        app:showAsAction="never" />
 </menu>
