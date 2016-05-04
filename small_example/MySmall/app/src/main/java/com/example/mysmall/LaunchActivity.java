@@ -14,12 +14,16 @@ import android.widget.Button;
 
 import net.wequick.small.Small;
 
+import com.example.mylib.MyLib;
+import com.example.mylib2.MyLib2;
+
 public class LaunchActivity extends Activity {
     private View mContentView;
     private View mControlsView;
     private Button mButton1;
     private Button mButton2;
     private Button mUpdate;
+    private Button mTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,13 @@ public class LaunchActivity extends Activity {
             }
         });
 
+        mTest = (Button) findViewById(R.id.test);
+        mTest.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                test();
+            }
+        });
+
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
         // Set up the user interaction to manually show or hide the system UI.
@@ -74,5 +85,10 @@ public class LaunchActivity extends Activity {
 
     private Activity getThis() {
         return this;
+    }
+
+    private void test() {
+        MyLib.test();
+        Log.d("locald","mylib2 test " + MyLib2.test());
     }
 }
