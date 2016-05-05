@@ -23,6 +23,13 @@
             android:name=".SubActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
+        <receiver android:name="com.example.mysmall.app.test.MyReceiver">
+            <intent-filter>
+                <action android:name="MyReceiver123" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
