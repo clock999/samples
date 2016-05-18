@@ -63,8 +63,11 @@ public class MainActivity extends Activity {
     }
 
     private void test() {
+
+        /*
         MyLib.test();
         Log.d("locald","mylib2 test " + MyLib2.test());
+        */
         /*
         File saveFile =  new File("/sdcard/file_test.txt");
         FileInputStream instream;
